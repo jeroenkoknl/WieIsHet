@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\BestandLader.cs" />
+    <Compile Include="Data\IBestandLader.cs" />
     <Compile Include="Eigenschap.cs" />
     <Compile Include="Persoon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
