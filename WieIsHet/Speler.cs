@@ -19,8 +19,14 @@ namespace WieIsHet
         {
             get
             {
-                for (var personen = spel.Personen.ToList(); personen.Count > 1; personen = spel.Personen.ToList())
+                while (true)
                 {
+                    var personen = spel.Personen.ToList();
+                    if (personen.Count == 1)
+                    {
+                        yield break;
+                    }
+
                     var eigenschappenAantal = personen.SelectMany(p => p.Eigenschappen).GroupBy(e => e).Select(g => new { Eigenschap = g.Key, Aantal = g.Count() }).ToList();
 
                     var helft = personen.Count / 2;
