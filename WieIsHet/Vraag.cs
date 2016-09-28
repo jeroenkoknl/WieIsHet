@@ -23,5 +23,7 @@ namespace WieIsHet
         {
             spel.VerwijderPersonenMetEigenschap(eigenschap, vanToepassing);
         }
+
+        public override string ToString() => Text;
     }
 }
