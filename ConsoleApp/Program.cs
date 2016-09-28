@@ -11,10 +11,10 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             var personenLader = new PersonenLader(new FileInfo(@"WieIsHet.json"));
-
+            var personen = personenLader.LeesPersonen().ToList();
             while (true)
             {
-                var spel = new Spel(personenLader.LeesPersonen().ToList());
+                var spel = new Spel(personen);
                 var speler = new Speler(spel);
 
                 foreach (var vraag in speler.Vragen)
