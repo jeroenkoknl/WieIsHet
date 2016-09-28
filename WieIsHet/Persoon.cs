@@ -1,18 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WieIsHet
 {
     public class Persoon
     {
-        private readonly HashSet<Eigenschap> eigenschappen = new HashSet<Eigenschap>();
-
-        public string Naam { get; set; }
-
-        public ISet<Eigenschap> Eigenschappen => eigenschappen;
-
-        public override string ToString()
+        public Persoon(string naam, IEnumerable<Eigenschap> eigenschappen)
         {
-            return Naam;
+            if (eigenschappen == null)
+                throw new ArgumentNullException(nameof(eigenschappen));
+            if (string.IsNullOrWhiteSpace(naam))
+                throw new ArgumentException("Value cannot be null or whitespace.", nameof(naam));
+            Naam = naam;
+            Eigenschappen = new HashSet<Eigenschap>(eigenschappen);
         }
+
+        public string Naam { get;  }
+
+        public IEnumerable<Eigenschap> Eigenschappen { get; }
+
+        public override string ToString() => Naam;
     }
 }

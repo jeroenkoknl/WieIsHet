@@ -6,7 +6,7 @@ namespace WieIsHet
     {
         public Eigenschap(string naam)
         {
-            if (String.IsNullOrWhiteSpace(naam))
+            if (string.IsNullOrWhiteSpace(naam))
             {
                 throw new ArgumentException("Argument is null or whitespace", nameof(naam));
             }
@@ -15,17 +15,9 @@ namespace WieIsHet
 
         public string Naam { get; }
 
-        public string Vraag => $"Heeft de persoon {Naam}?";
+        public override string ToString() => Naam;
 
-        public override string ToString()
-        {
-            return Naam;
-        }
-
-        protected bool Equals(Eigenschap other)
-        {
-            return string.Equals(Naam, other.Naam);
-        }
+        protected bool Equals(Eigenschap other) => string.Equals(Naam, other.Naam);
 
         public override bool Equals(object obj)
         {
@@ -37,16 +29,13 @@ namespace WieIsHet
             {
                 return true;
             }
-            if (obj.GetType() != this.GetType())
+            if (obj.GetType() != GetType())
             {
                 return false;
             }
             return Equals((Eigenschap) obj);
         }
 
-        public override int GetHashCode()
-        {
-            return Naam.GetHashCode();
-        }
+        public override int GetHashCode() => Naam.GetHashCode();
     }
 }
