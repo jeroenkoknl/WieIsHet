@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WieIsHet", "WieIsHet\WieIsHet.csproj", "{AAF3FDF2-220F-413B-B239-C836762BF2E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{7AE6270E-B480-4AEE-8578-87FBBF161DCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAF3FDF2-220F-413B-B239-C836762BF2E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF3FDF2-220F-413B-B239-C836762BF2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF3FDF2-220F-413B-B239-C836762BF2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF3FDF2-220F-413B-B239-C836762BF2E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE6270E-B480-4AEE-8578-87FBBF161DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE6270E-B480-4AEE-8578-87FBBF161DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE6270E-B480-4AEE-8578-87FBBF161DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE6270E-B480-4AEE-8578-87FBBF161DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
